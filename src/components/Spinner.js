@@ -45,6 +45,7 @@ export default function Spinner() {
 
   const toggleSpinner = () => {
     /* STEP 4 */
+    setSpinnerOn(!spinnerOn);
   };
 
   return (
@@ -58,7 +59,7 @@ export default function Spinner() {
         ) /* STEP 2 */
       }
       <button id="toggleSpinner" onClick={toggleSpinner}>
-        Hide Spinner {/* STEP 3 */}
+        {spinnerOn ? "Hide" : "Show"} Spinner {/* STEP 3 */}
       </button>
     </div>
   );
