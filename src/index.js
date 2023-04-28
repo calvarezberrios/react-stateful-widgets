@@ -8,6 +8,7 @@ import Spinner from "./components/Spinner";
 import Squares from "./components/Squares";
 import Programmers from "./components/Programmers";
 import Todos from "./components/Todos";
+import Game from "./components/game";
 
 render(
   <>
@@ -18,6 +19,7 @@ render(
     <Squares />
     <Programmers />
     <Todos />
+    <Game />
   </>,
   document.querySelector("#root")
 );

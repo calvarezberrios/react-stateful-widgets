@@ -7,7 +7,7 @@
 body {
   background-color: rgb(244, 244, 244);
   color: rgb(65, 75, 60);
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
 }
 h2 {
   position: absolute;
@@ -15,7 +15,8 @@ h2 {
   left: 5%;
   transform-origin: center left;
 }
-button, input {
+button,
+input {
   margin: 3px;
   color: #7a6a6a;
   border: 1px solid rgb(210, 210, 210);
@@ -42,7 +43,7 @@ button, input {
 }
 @keyframes rotate {
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 .spinner {
@@ -54,7 +55,7 @@ button, input {
 .squares {
   display: grid;
   grid-template-columns: 50px 50px;
-  grid-template-rows: 50px 50px; 
+  grid-template-rows: 50px 50px;
   column-gap: 10px;
   row-gap: 10px;
 
@@ -73,4 +74,35 @@ button, input {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  column-gap: 0px;
+  row-gap: 0px;
+  margin-bottom: 30px;
+
+  .cell {
+    justify-self: stretch;
+
+    cursor: pointer;
+
+    & > h3 {
+      text-align: center;
+    }
+  }
+}
+
+.winner {
+  position: absolute;
+  min-height: 150px;
+  background-color: white;
+  margin-top: -38px;
+  padding: 32px;
+  border: 1px solid rgb(210, 210, 210);
+  box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+  border-radius: 16px;
+  .column();
 }
