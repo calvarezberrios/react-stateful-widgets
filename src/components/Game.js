@@ -22,11 +22,8 @@ const Game = () => {
   const [announcement, setAnnouncement] = useState(null);
 
   useEffect(() => {
-    console.log(game);
     if (game.isOver) announceWinner();
     else if (currentPlayer === COMPUTER) computerPlay();
-
-    console.log(announcement);
   }, [currentPlayer, announcement, rounds, grid]);
 
   const makeMove = (cell) => {
